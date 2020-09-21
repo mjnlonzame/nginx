@@ -2,10 +2,13 @@
 
  apt-get -y install nginx
 
+ rm -rf /etc/nginx/sites-enabled
 
- rm -rf /usr/share/nginx/www
+ cp -r /vagrant/sites-enabled /etc/nginx
 
- ln -s /vagrant/www /usr/share/nginx/www
+ # rm -rf /usr/share/nginx/www
+
+ # ln -s /vagrant/www /usr/share/nginx/www
 
 
  service nginx start
